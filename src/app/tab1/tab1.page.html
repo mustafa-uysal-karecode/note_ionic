@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      iş girme
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">
+      
+    </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-item>
+    <ion-input [(ngModel)]="todo" label="İş Giriniz" placeholder="İş Giriniz"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-button (click)="isGir()">GİR</ion-button>
+  </ion-item>
+  <hr />
+  <ion-list>
+    <ion-item *ngFor="let item of data" (click)="presentActionSheet(item)">
+      <ion-label>{{ item.todo | json }}</ion-label>
+    </ion-item>
+  </ion-list>
+  <app-explore-container name="Tab 1 page"></app-explore-container>
+</ion-content>

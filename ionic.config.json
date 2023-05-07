@@ -1,0 +1,7 @@
+{
+  "name": "deneme",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
